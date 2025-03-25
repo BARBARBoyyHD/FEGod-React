@@ -1,15 +1,15 @@
-import Navbar from "./components/Navbar";
-import NavbarTailwind from "./components/NavbarTailwind";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePages from "./pages/HomePages";
+import DashboardPages from "./pages/DashboardPages";
 
 function App() {
   return (
-    <div>
-      {/* <Navbar /> */}
-      <NavbarTailwind/>
-      <div className="h-[200vh] flex items-center justify-center bg-gray-800 text-white">
-        <h1 className="text-3xl font-bold underline">Scroll Down</h1>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePages />} />
+        <Route path="/dashboard" element={<DashboardPages />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
