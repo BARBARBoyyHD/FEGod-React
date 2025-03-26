@@ -7,7 +7,7 @@ function HomePages() {
     <div>
       {/* <Navbar /> */}
       <NavbarTraining/>
-      <div className="h-[100vh] flex items-center justify-center bg-sky-500 text-white">
+      <div className="h-[100vh] flex items-center justify-center bg-sky-500 text-white flex-col">
         <h1 className="text-3xl font-bold underline">Section 1</h1>
         <Link to={"/dashboard"}>Go to dashboard</Link>
       </div>

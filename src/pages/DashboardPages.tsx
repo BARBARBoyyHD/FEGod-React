@@ -3,7 +3,7 @@ import Sidebar from "../components/SideBar";
 import SidebarToggle from "../components/button/SidebarToggle";
 
 export default function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <div>

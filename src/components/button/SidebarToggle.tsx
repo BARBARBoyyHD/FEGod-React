@@ -1,13 +1,18 @@
 import React from "react";
-import { BiMenu } from "react-icons/bi";
+import { BiMenu, BiX } from "react-icons/bi";
 
-const SidebarToggle = ({ setIsOpen }) => {
+interface SidebarToggleProps {
+  isOpen: boolean;
+  setIsSidebarOpen: (open: boolean) => void;
+}
+
+const SidebarToggle: React.FC<SidebarToggleProps> = ({ isOpen, setIsSidebarOpen }) => {
   return (
     <button
-      onClick={() => setIsOpen((prev) => !prev)}
-      className="fixed top-5 left-5 p-3 text-white bg-slate-900 rounded-lg shadow-lg"
+      onClick={() => setIsSidebarOpen(!isOpen)}
+      className="p-3 text-black transition-transform duration-300"
     >
-      <BiMenu size={24} />
+      {isOpen ? <BiX size={24} /> : <BiMenu size={24} />}
     </button>
   );
 };
